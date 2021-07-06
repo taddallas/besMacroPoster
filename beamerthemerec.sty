@@ -1,0 +1,168 @@
+\ProvidesPackage{rec}  
+
+% Color refs
+\definecolor{boss1}{HTML}{98D48C}
+\definecolor{boss1Dark}{HTML}{4c6a46}
+\definecolor{boss2}{HTML}{58baa8}
+\definecolor{boss2Dark}{HTML}{2c5d53}
+\definecolor{boss3}{HTML}{115d7f}
+\definecolor{boss3Dark}{HTML}{0a374c}
+\definecolor{boss4}{HTML}{81c7d2}
+\definecolor{boss4Dark}{HTML}{406369}
+\definecolor{boss5}{HTML}{d48c98}
+\definecolor{boss5Dark}{HTML}{6a464c}
+
+
+\definecolor{lsu1}{HTML}{FDD023}
+\definecolor{lsu2}{HTML}{461D7C}
+\definecolor{lightlsu1}{HTML}{feeca7}
+\definecolor{lightlsu2}{HTML}{b5a4ca}
+
+
+\definecolor{recReddish}{HTML}{94caff}
+\definecolor{recRed}{HTML}{1e90ff}
+
+
+
+
+
+
+\definecolor{gray00}{HTML}{F3F3F3}		
+\definecolor{gray0}{HTML}{DADAD9}		
+\definecolor{gray1}{HTML}{888a85}		
+\definecolor{gray2}{HTML}{555753}		
+\definecolor{gray3}{HTML}{2e3436}
+\definecolor{nearBlack}{HTML}{191919}
+
+
+
+
+
+% Settings
+\setbeamercolor{headline}{fg=recRed,bg=gray3}
+\setbeamercolor{footline}{fg=recRed, bg=gray0}
+\setbeamerfont{footline}{size=\large,series=\tt}
+\setbeamercolor{separation line}{bg=recRed}
+\setbeamercolor{title in headline}{fg=recRed}
+\setbeamercolor{author in headline}{fg=white}
+\setbeamercolor{institute in headline}{fg=white}
+
+\setbeamercolor{framesubtitle}{fg=recRed, bg=nearBlack}
+\setbeamercolor{author in head/foot}{fg=recRed, bg=black}
+\setbeamercolor{title in head/foot}{fg=recRed, bg=black}
+
+\setbeamercolor*{normal text}{fg=black, bg=gray00}
+\setbeamercolor*{block body}{fg=black, bg=gray0}
+\setbeamercolor*{block title}{fg=black, bg=gray1}
+\setbeamerfont{block title}{size=\Large, series=\bf}
+\setbeamercolor{upper separation line head}{fg=recRed}
+
+\setbeamercolor*{example body}{fg=black,bg=recReddish}
+\setbeamercolor*{example text}{fg=black,bg=recReddish}
+\setbeamercolor*{block title example}{fg=white, bg=recRed}
+\setbeamercolor{block body example}{fg=black,bg=recReddish}
+
+\setbeamercolor{alerted text}{fg=lsu2}
+
+\setbeamercolor{structure}{fg=recRed}
+
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{frametitle}[default][right]
+
+
+
+
+
+
+
+\setbeamertemplate{block begin}{
+  \vskip.75ex
+  \begin{beamercolorbox}[ht=3.5ex,dp=0.5ex,center,leftskip=-1em,colsep*=.75ex]{block title}%
+    \usebeamerfont*{block title}%
+    {\phantom{Gg}\insertblocktitle}
+  \end{beamercolorbox}%
+  {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+  \usebeamerfont{block body}%
+  \begin{beamercolorbox}[leftskip=1em,colsep*=.75ex,sep=0.5ex,vmode]{block body}%
+    \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+  }
+  \setbeamertemplate{block end}{
+  \end{beamercolorbox}
+}
+
+
+
+
+
+\setbeamertemplate{headline}{  
+  \leavevmode
+
+  \begin{beamercolorbox}[wd=\paperwidth]{headline}
+    \begin{columns}[T]
+      \begin{column}{.02\paperwidth}
+      \end{column}
+      \begin{column}{.7\paperwidth}
+        \vskip4ex
+        \raggedleft
+        \usebeamercolor{title in headline}{\color{fg}\textbf{\LARGE{\inserttitle}}\\[1ex]}
+        \usebeamercolor{author in headline}{\color{fg}\large{\insertauthor}\\[1ex]}
+        \usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]}     
+      \end{column}
+      \begin{column}{.25\paperwidth}
+        \vskip8ex
+        \begin{center}
+          \includegraphics[width=.95\linewidth]{figures/rec.pdf}
+        \end{center}
+        \vskip2ex
+      \end{column}
+      \begin{column}{.02\paperwidth}
+      \end{column}
+    \end{columns}
+    \vskip2ex
+  \end{beamercolorbox}
+
+
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+    \rule{0pt}{10pt}
+  \end{beamercolorbox}
+}
+
+
+
+
+
+\setbeamertemplate{footline}{
+  \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
+    \rule{0pt}{3pt}
+  \end{beamercolorbox}
+  
+  \leavevmode%
+  \begin{beamercolorbox}[ht=4ex,leftskip=1em,rightskip=1em]{author in head/foot}%
+    \texttt{\leftfoot}
+    \hfill
+    \texttt{\rightfoot}
+    \vskip1ex
+  \end{beamercolorbox}
+  \vskip0pt%
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
+    \rule{0pt}{10pt}
+  \end{beamercolorbox}
+}
+
+
+%\mode<all>
+
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{itemize item}{\raisebox{0.12ex}{$\blacktriangleright$}\hskip0.1em}
+\setbeamertemplate{itemize subitem}{\raisebox{0.12ex}{$\triangleright$}\hskip0.1em}
+\setbeamerfont{itemize/enumerate body}{size=\normalsize}
+\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
+\setbeamerfont{itemize/enumerate subsubbody}{size=\normalsize}
+
+
+\setbeamertemplate{bibliography item}[text]
+\setbeamercolor{bibliography item}{fg=black,bg=white}
+\setbeamercolor{bibliography entry author}{fg=black,bg=white}
+\setbeamercolor{bibliography item}{fg=black,bg=white}
+
